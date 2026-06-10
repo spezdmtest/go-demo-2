@@ -13,11 +13,15 @@ func main() {
 	transactionsNew := transactions
 	transactionsNew[0] = 30
 
-	fmt.Println(transactions)
-	fmt.Println(transactionsNew)
+	// fmt.Println(transactions)
+	// fmt.Println(transactionsNew)
 	// patrial := transactions[1:4]
 	// patrial := transactions[:4]
-	patrial := transactions[1:]
-	fmt.Println(patrial)
+	// transacrionPatrial := transactions[1:]
+	// transacrionNewPatrial := transacrionPatrial[:1]
+	// transacrionNewPatrial[0] = 30
+	transacrionPatrial := transactions[1:]
+	fmt.Println(transacrionPatrial)
+	// fmt.Println(transacrionNewPatrial)
 
 }
