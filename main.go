@@ -15,5 +15,9 @@ func main() {
 
 	fmt.Println(transactions)
 	fmt.Println(transactionsNew)
+	// patrial := transactions[1:4]
+	// patrial := transactions[:4]
+	patrial := transactions[1:]
+	fmt.Println(patrial)
 
 }
