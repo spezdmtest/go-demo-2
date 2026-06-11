@@ -22,5 +22,7 @@ func main() {
 	transacrionNewPatrial[0] = 30
 	fmt.Println(transacrionPatrial)
 	fmt.Println(transacrionNewPatrial)
+	fmt.Println(len(transacrionPatrial), cap(transacrionPatrial))
+	fmt.Println(len(transacrionNewPatrial), cap(transacrionNewPatrial))
 
 }
