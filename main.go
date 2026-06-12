@@ -9,15 +9,14 @@ func main() {
 	// banks2 := [2]string{}
 	// fmt.Println(transactions)
 	// fmt.Println(banks)
-	transactions := [5]int{1, 2, 3, 4, 5}
-	transactionsNew := transactions
-	transactionsNew[0] = 30
-
+	transactions := [6]int{1, 2, 3, 4, 5, 6}
+	// transactionsNew := transactions
+	// transactionsNew[0] = 30
 	// fmt.Println(transactions)
 	// fmt.Println(transactionsNew)
 	// patrial := transactions[1:4]
 	// patrial := transactions[:4]
-	transacrionPatrial := transactions[1:]
+	transacrionPatrial := transactions[1:5]
 	transacrionNewPatrial := transacrionPatrial[:1]
 	transacrionNewPatrial[0] = 30
 	fmt.Println(transacrionPatrial)
