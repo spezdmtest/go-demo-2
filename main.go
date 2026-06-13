@@ -57,6 +57,12 @@ func main() {
 	// 	fmt.Println(tr1[index])
 	// }
 
+	tr := make([]string, 0, 2)
+	fmt.Println(len(tr), cap(tr))
+	tr = append(tr, "1")
+	tr = append(tr, "2")
+	fmt.Println(tr)
+
 	transactions := []float64{}
 	for {
 		transaction := scanTransaction()
