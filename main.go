@@ -28,10 +28,31 @@ func main() {
 	// slice := transactions[:2]
 	// slice[0] = 100
 
-	transactions := []int{0, 20, 35}
-	temp := transactions
-	transactions = append(transactions, 100)
-	fmt.Println(temp)
-	fmt.Println(transactions)
+	// transactions := []int{0, 20, 35}
+	// temp := transactions
+	// transactions = append(transactions, 100)
+	// fmt.Println(temp)
+	// fmt.Println(transactions)
+	//-------------------------------------------------------------
 
+	// у циклі запитуємо введення транзакцій: -10, 10, 40.5
+	// додаємо кожну транзакцію до масиву транзакцій
+	// виводимо масив транзакцій
+
+	transactions := []float64{}
+	for {
+		transaction := scanTransaction()
+		if transaction == 0 {
+			break
+		}
+		transactions = append(transactions, transaction)
+	}
+	fmt.Println(transactions)
+}
+
+func scanTransaction() float64 {
+	var transaction float64
+	fmt.Print("Введіть транзакцію (n для завершення): ")
+	fmt.Scan(&transaction)
+	return transaction
 }
