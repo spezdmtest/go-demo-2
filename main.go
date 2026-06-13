@@ -39,15 +39,20 @@ func main() {
 	// додаємо кожну транзакцію до масиву транзакцій
 	// виводимо масив транзакцій
 
-	transactions := []float64{}
-	for {
-		transaction := scanTransaction()
-		if transaction == 0 {
-			break
-		}
-		transactions = append(transactions, transaction)
-	}
-	fmt.Println(transactions)
+	tr1 := []int{1, 2, 3}
+	tr2 := []int{4, 5, 6}
+	tr1 = append(tr1, tr2...)
+	fmt.Println(tr1)
+
+	// transactions := []float64{}
+	// for {
+	// 	transaction := scanTransaction()
+	// 	if transaction == 0 {
+	// 		break
+	// 	}
+	// 	transactions = append(transactions, transaction)
+	// }
+	// fmt.Println(transactions)
 }
 
 func scanTransaction() float64 {
