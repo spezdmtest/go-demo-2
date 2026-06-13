@@ -38,11 +38,12 @@ func main() {
 	// у циклі запитуємо введення транзакцій: -10, 10, 40.5
 	// додаємо кожну транзакцію до масиву транзакцій
 	// виводимо масив транзакцій
+	// вивести суму баланса в консоль
 
-	tr1 := []int{1, 2, 3}
-	tr2 := []int{4, 5, 6}
-	tr1 = append(tr1, tr2...)
-	fmt.Println(tr1)
+	// tr1 := []int{1, 2, 3}
+	// tr2 := []int{4, 5, 6}
+	// tr1 = append(tr1, tr2...)
+	// fmt.Println(tr1)
 
 	// for index, value := range tr1 {
 	// 	fmt.Println(index, value)
@@ -52,19 +53,21 @@ func main() {
 	// 	fmt.Println(value)
 	// }
 
-	for index := range tr1 {
-		fmt.Println(tr1[index])
-	}
-
-	// transactions := []float64{}
-	// for {
-	// 	transaction := scanTransaction()
-	// 	if transaction == 0 {
-	// 		break
-	// 	}
-	// 	transactions = append(transactions, transaction)
+	// for index := range tr1 {
+	// 	fmt.Println(tr1[index])
 	// }
-	// fmt.Println(transactions)
+
+	transactions := []float64{}
+	for {
+		transaction := scanTransaction()
+		if transaction == 0 {
+			break
+		}
+		transactions = append(transactions, transaction)
+	}
+	fmt.Println(transactions)
+	balance := calculateBalance(transactions)
+	fmt.Printf("Ваш баланс: %.2f$", balance)
 }
 
 func scanTransaction() float64 {
@@ -72,4 +75,12 @@ func scanTransaction() float64 {
 	fmt.Print("Введіть транзакцію (n для завершення): ")
 	fmt.Scan(&transaction)
 	return transaction
+}
+
+func calculateBalance(transactions []float64) float64 {
+	balance := 0.0
+	for _, value := range transactions {
+		balance += value
+	}
+	return balance
 }
